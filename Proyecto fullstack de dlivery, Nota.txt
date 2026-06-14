@@ -1,0 +1,18 @@
+Proyecto fullstack de dlivery, "Nota: necesito poder definirle que naturaleza tendrá o a que clase pertenece todo el ecosistema que quiero crear, si es un Saas, Un Baas ó un IaaS", necesito definir en que categoría entra todo mi ecosistema, necesitare poder definir si este ecosistema debe ser creado con microservicios o quizá con otros patrones de diseño que se adapten mejor a todo lo que yo deseo implementar.
+
+Nombre del proyecto: Servicio Express Thimpson.
+Objetivo: Crear tres plataformas unificadas mediante API Rest a una base de datos PostgreSQL para crear un ecosistema de Servicio Express Thimpson, multitenanse o multisucursal, que asocie la funcionalidad de marketplace tambien, mas adelante especificare porque debe tener esta caracteristica sumada a toda la maquinaria que sera Servicio Express Thimpson, otra característica que debe de tener es poder funcionar como un CMS con super poderes también, para que el super administrador universal de todo el ecosistema de Servicio Express Thimpson pueda tener el control total de todo, hacer crud de todo lo que exista en el ecosistema, gestionar dinámicamente la aplicación web que vera el publico en general para poder mostrar, quitar, actualizar los contenidos existente o agregar nuevos contenidos programables en el en tiempo ósea por rangos de fechas, por ejemplo en fechas especificas o festivas una vez que culminen las los rangos de fechas desaparecen esos contenidos y se actualizan por otros.
+
+Descripción de Database: Necesito una base de datos relacional diseñada desde el principio para soportar grandes volúmenes de datos, grandes volúmenes de peticiones o poolings al día, lo que necesito es que no colapse al tener trafico elevado necesito que sea escalable, versátil, que este diseñada y construida para perdurar en el tiempo y soportar y adaptarse a los constantes cambios y seguir manteniéndose escalable y estable, blindada y rápida, Nota: mas adelante se especificara todas las necesidades que debe resolver la base de datos, que es lo que se necesita para solventar todas las demandas de la API y de las otras tres plataformas.
+
+API Rest Full: Necesito ayuda para saber si es necesario la implementación de API Rest para todo este ecosistema y como debo crearla y como debo hacer que se conecten a ella y como la API debe conectarse y obtener información de la base de datos, todo esto debe hacer una vez que se haya diseñado y construido la base de datos.
+
+Descripción de Plataforma 1: Panel administrativo web en donde se pretende ver todo el comportamiento de los flujos de trabajo, métricas, estadísticas, KPIs, indicadores de logro, contabilizar ganancias, registrar flujos de trabajo, catalogo de servicios propios de Servicio Express Thimpson y afiliados(personas naturales, negocios o personas jurídicas que se afilien o adquieran una membrecía para poder ofertar sus producto y/o servicios dentro de el marketplace que existirá en el ecosistema de Servicio Express Thimpson, que se mostrará en un apartado de la Aplicación Web.).
+
+Agente de IA o Asistente virtual administrativo: 
+
+Descripción de Plataforma 2: Aplicación web que servirá para 
+
+Agente de IA o Asistente virtual : 
+
+Descripción de Plataforma 3: Aplicación Móvil con React Native
