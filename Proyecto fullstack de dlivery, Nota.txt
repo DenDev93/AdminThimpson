@@ -1,18 +1,147 @@
-Proyecto fullstack de dlivery, "Nota: necesito poder definirle que naturaleza tendrá o a que clase pertenece todo el ecosistema que quiero crear, si es un Saas, Un Baas ó un IaaS", necesito definir en que categoría entra todo mi ecosistema, necesitare poder definir si este ecosistema debe ser creado con microservicios o quizá con otros patrones de diseño que se adapten mejor a todo lo que yo deseo implementar.
+Proyecto fullstack de delivery, "Nota: necesito poder definirle que naturaleza tendrá o a que clase pertenece todo el ecosistema que quiero crear, si es un Saas, Un Baas ó un IaaS", necesito definir en que categoría entra todo mi ecosistema, necesitare poder definir si este ecosistema debe ser creado con microservicios o quizá con otros patrones de diseño que se adapten mejor a todo lo que yo deseo implementar.
 
 Nombre del proyecto: Servicio Express Thimpson.
-Objetivo: Crear tres plataformas unificadas mediante API Rest a una base de datos PostgreSQL para crear un ecosistema de Servicio Express Thimpson, multitenanse o multisucursal, que asocie la funcionalidad de marketplace tambien, mas adelante especificare porque debe tener esta caracteristica sumada a toda la maquinaria que sera Servicio Express Thimpson, otra característica que debe de tener es poder funcionar como un CMS con super poderes también, para que el super administrador universal de todo el ecosistema de Servicio Express Thimpson pueda tener el control total de todo, hacer crud de todo lo que exista en el ecosistema, gestionar dinámicamente la aplicación web que vera el publico en general para poder mostrar, quitar, actualizar los contenidos existente o agregar nuevos contenidos programables en el en tiempo ósea por rangos de fechas, por ejemplo en fechas especificas o festivas una vez que culminen las los rangos de fechas desaparecen esos contenidos y se actualizan por otros.
+Objetivo: Crear cuatro plataformas unificadas mediante API Rest a una base de datos PostgreSQL para crear un ecosistema de Servicio Express Thimpson, multitenanse o multisucursal, que asocie la funcionalidad de marketplace tambien, mas adelante especificare porque debe tener esta caracteristica sumada a toda la maquinaria que sera Servicio Express Thimpson, otra característica que debe de tener es poder funcionar como un CMS con super poderes también, para que el super administrador universal de todo el ecosistema de Servicio Express Thimpson pueda tener el control total de todo, hacer crud de todo lo que exista en el ecosistema, gestionar dinámicamente la aplicación web que vera el publico en general para poder mostrar, quitar, actualizar los contenidos existente o agregar nuevos contenidos programables en el en tiempo ósea por rangos de fechas, por ejemplo en fechas especificas o festivas una vez que culminen las los rangos de fechas desaparecen esos contenidos y se actualizan por otros.
 
 Descripción de Database: Necesito una base de datos relacional diseñada desde el principio para soportar grandes volúmenes de datos, grandes volúmenes de peticiones o poolings al día, lo que necesito es que no colapse al tener trafico elevado necesito que sea escalable, versátil, que este diseñada y construida para perdurar en el tiempo y soportar y adaptarse a los constantes cambios y seguir manteniéndose escalable y estable, blindada y rápida, Nota: mas adelante se especificara todas las necesidades que debe resolver la base de datos, que es lo que se necesita para solventar todas las demandas de la API y de las otras tres plataformas.
 
 API Rest Full: Necesito ayuda para saber si es necesario la implementación de API Rest para todo este ecosistema y como debo crearla y como debo hacer que se conecten a ella y como la API debe conectarse y obtener información de la base de datos, todo esto debe hacer una vez que se haya diseñado y construido la base de datos.
 
-Descripción de Plataforma 1: Panel administrativo web en donde se pretende ver todo el comportamiento de los flujos de trabajo, métricas, estadísticas, KPIs, indicadores de logro, contabilizar ganancias, registrar flujos de trabajo, catalogo de servicios propios de Servicio Express Thimpson y afiliados(personas naturales, negocios o personas jurídicas que se afilien o adquieran una membrecía para poder ofertar sus producto y/o servicios dentro de el marketplace que existirá en el ecosistema de Servicio Express Thimpson, que se mostrará en un apartado de la Aplicación Web.).
+Descripción de Plataforma 1: Panel administrativo web con react en donde se pretende ver todo el comportamiento de los flujos de trabajo, métricas, estadísticas, KPIs, indicadores de logro, contabilizar ganancias, registrar flujos de trabajo, catalogo de servicios propios de Servicio Express Thimpson y afiliados(personas naturales, negocios o personas jurídicas que se afilien o adquieran una membrecía para poder ofertar sus producto y/o servicios dentro de el marketplace que existirá en el ecosistema de Servicio Express Thimpson, que se mostrará en un apartado de la Aplicación Web).
 
-Agente de IA o Asistente virtual administrativo: 
+Agente de IA o Asistente virtual administrativo: el agente de ia virtual que existirá en el panel administrativo es quien deberá trabajar de manera autónoma con tareas repetitivas especificas las 24 horas del dia, deberá recibir las solicitudes de servicios que lleguen del asistente virtual en forma de chatbot web que existira en la aplicación web abierta el publico y también debe capturar las solicitudes de que se capturen en el chatbot de whatsapp  que también existira en la aplicación web del mismo modo que el chatboot web son dos chatbot diferentes, y a parte de capturar lo que venga de los chatbots también deberá capturar las solicitudes que vengan de los formularios los cuales estarán disponibles en cards que estarán visibles al publico en general en la aplicación web, serán formularios inteligentes en donde las personas pueden realizar solicitudes de servicios de manera dinámica e inteligente, flexible y personalizado según las opciones que vayan escogiendo siempre y cuando esten disponibles en el o los formularios.
 
-Descripción de Plataforma 2: Aplicación web que servirá para 
+Descripción de Plataforma 2: Aplicación web con react que servirá para el publico en general y a su vez sera un marketplace de negocios afiliados que mostraran sus catálogos individuales de productos y/o servicios,  la cual mostrará información relevante del negocio, como su nombre, números de contacto, misión y vision, catalogo de servicios propios de thimpson express, sección de galerías, sección de testimonios, sección de contacto, sección de marketplace en donde existira la opción de registrar negocio y ahi es donde entrara en juego las funcionalidades de CMS inteligente, para que cada negocio tenga la capacidad de gestionar su stock o inventario de productos que ofrece y también servicios o ambas cosas, con la unica condición de que usen el servicio de delivery de servicio express thimpson, de hecho debe ser automatico que cuando le hagan un pedido a travez de la aplicación web de thimpson express a un negocio registrado entonces que automáticamente tenga que utilizar el servicio de delivery de servicio express thimpson, para los negocios debe existir un modo gratis de mantenerse afiliados a servicio express thimpson y otro modo premium en donde deban pagar el plan mensualmente para usar otras funciones avanzadas del plan premium, esta sección de marketplace debe tener opción de suscribirse para poder acceder a ver todo los que ofrecerá la plataforma, una vez suscrito podrá ver la opción de registrarse con una cuenta de correo para después poder iniciar sesion, una sección de atención al cliente, también la aplicación web debe tener muchos llamados a la accion, flecha en todos los apartados o secciones de volver al inicio del la pagina en case de que si al hacer scroll es muy extenso, colores con los que se debe desarrollar las interfaces de la pagina web: 
 
-Agente de IA o Asistente virtual : 
+Colores de la Marca (Principales)
+Amarillo/Dorado: #FBB03B (Utilizado en el logo de Thimpson, textos resaltados).
 
-Descripción de Plataforma 3: Aplicación Móvil con React Native
+Negro Oscuro: #000000 (Utilizado en los fondos, la motocicleta, la chaqueta del repartidor y el texto sobre la franja amarilla).
+
+Blanco: #FFFFFF (Utilizado para el texto de lectura principal, logos secundarios y bordes).
+
+Colores Secundarios (Cajas y Fondos)
+
+Verde Azulado Oscuro (Teal): #0B1F22 (Utilizado como color de fondo en la caja central).
+
+Marrón Claro/Cartón: #BC8A5F (El color de la bolsa de papel kraft que sostiene el repartidor).
+
+Colores de Marcas Externas (Contacto)
+
+Verde (WhatsApp / Claro): #25D366 (Tono estándar para el ícono de WhatsApp y el logo de Claro).
+
+Azul (Tigo): #00377B (Tono azul utilizado en el logo de Tigo).
+
+Tip para tu desarrollo web: Si estás usando CSS, puedes configurar estos colores como variables en tu archivo raíz (:root) para mantener la consistencia en toda la aplicación:
+
+:root {
+  --thimpson-yellow: #FBB03B;
+  --thimpson-black: #000000;
+  --thimpson-white: #FFFFFF;
+  --thimpson-dark-teal: #0B1F22;
+  --whatsapp-green: #25D366;
+  --tigo-blue: #00377B;
+}
+.
+
+Agente de IA o Asistente virtual de la aplicación web: 
+
+ChatBot de whatsapp con inteligencia artificial con whatsapp bussiness api key: 
+
+Descripción de Plataforma 3: App Cliente Aplicación Móvil con React Native
+
+Colores Principales (UI Base)
+Amarillo Vibrante: #FFD500 (El color predominante en botones principales, cabeceras, el panel lateral y los íconos del menú inferior cuando están activos).
+
+Blanco: #FFFFFF (Fondo general de la aplicación, tarjetas de negocios y campos de texto).
+
+Negro / Gris Muy Oscuro: #1A1A1A (Utilizado en las tarjetas oscuras como "Atención al cliente", "Horario" y "Billetera").
+
+Negro Puro: #000000 (Utilizado para los textos principales, títulos y el logo).
+
+Colores Neutros (Textos secundarios y bordes)
+Gris Medio: #757575 (Utilizado para textos secundarios, descripciones, placeholders en formularios y los íconos del menú inferior cuando están inactivos).
+
+Gris Claro: #EEEEEE (Utilizado para bordes de botones, líneas separadoras y el fondo detrás del mapa).
+
+Colores de Acento (Categorías y Marcas)
+Estos colores se utilizan específicamente para diferenciar los íconos de las categorías de negocios y logos:
+
+Rojo: #E53935 (Logos de comida y el logo de Claro).
+
+Verde: #4CAF50 (Ícono de la categoría de farmacias).
+
+Azul: #1976D2 (Ícono de la categoría de supermercados y el logo de Tigo).
+
+Naranja: #FF9800 (Estrellas de calificación).
+
+Actualización para tu CSS (:root):
+Si estás desarrollando la versión web de esta app, aquí tienes cómo se vería la actualización de tus variables para que coincidan con la interfaz móvil:
+
+:root {
+  /* Colores principales */
+  --app-yellow: #FFD500;
+  --app-bg-white: #FFFFFF;
+  --app-card-dark: #1A1A1A;
+  --app-text-main: #000000;
+  
+  /* Neutros */
+  --app-text-muted: #757575;
+  --app-border-light: #EEEEEE;
+  
+  /* Acentos de categorías */
+  --cat-food-red: #E53935;
+  --cat-pharmacy-green: #4CAF50;
+  --cat-super-blue: #1976D2;
+  --rating-star-orange: #FF9800;
+}
+
+Descripción de Plataforma 4: App Motorizado(repartidor, conductor) Aplicación Móvil con React Native 
+
+Colores Principales (UI Base)
+Amarillo Vibrante: #FFD500 (El color predominante en botones principales, cabeceras, el panel lateral y los íconos del menú inferior cuando están activos).
+
+Blanco: #FFFFFF (Fondo general de la aplicación, tarjetas de negocios y campos de texto).
+
+Negro / Gris Muy Oscuro: #1A1A1A (Utilizado en las tarjetas oscuras como "Atención al cliente", "Horario" y "Billetera").
+
+Negro Puro: #000000 (Utilizado para los textos principales, títulos y el logo).
+
+Colores Neutros (Textos secundarios y bordes)
+Gris Medio: #757575 (Utilizado para textos secundarios, descripciones, placeholders en formularios y los íconos del menú inferior cuando están inactivos).
+
+Gris Claro: #EEEEEE (Utilizado para bordes de botones, líneas separadoras y el fondo detrás del mapa).
+
+Colores de Acento (Categorías y Marcas)
+Estos colores se utilizan específicamente para diferenciar los íconos de las categorías de negocios y logos:
+
+Rojo: #E53935 (Logos de comida y el logo de Claro).
+
+Verde: #4CAF50 (Ícono de la categoría de farmacias).
+
+Azul: #1976D2 (Ícono de la categoría de supermercados y el logo de Tigo).
+
+Naranja: #FF9800 (Estrellas de calificación).
+
+Actualización para tu CSS (:root):
+Si estás desarrollando la versión web de esta app, aquí tienes cómo se vería la actualización de tus variables para que coincidan con la interfaz móvil:
+
+:root {
+  /* Colores principales */
+  --app-yellow: #FFD500;
+  --app-bg-white: #FFFFFF;
+  --app-card-dark: #1A1A1A;
+  --app-text-main: #000000;
+  
+  /* Neutros */
+  --app-text-muted: #757575;
+  --app-border-light: #EEEEEE;
+  
+  /* Acentos de categorías */
+  --cat-food-red: #E53935;
+  --cat-pharmacy-green: #4CAF50;
+  --cat-super-blue: #1976D2;
+  --rating-star-orange: #FF9800;
+}
+
+
