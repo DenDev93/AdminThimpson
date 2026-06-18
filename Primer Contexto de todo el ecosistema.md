@@ -221,7 +221,7 @@ repositorio de GitHub: https://github.com/DenDev93/appwebThimpson.git
 
 créame un directorio para la base de datos para que cada que se hagan cambios y sea afectada la base de datos.
 
-directorio local donde se crearan los archivos sql de la base de datos y/o backups: 
+directorio local donde se crearan los archivos sql de la base de datos y/o backups: C:\\Users\\DMLM\\Desktop\\ThimpsonExpressDB\\
 
 repositorio de GitHub: https://github.com/DenDev93/ThimpsonExpressDB.git
 
@@ -231,13 +231,19 @@ créame también los directorios correspondientes para el desarrollo de cada una
 
 
 
-directorio local donde se crearan los archivos necesarios de la aplicación móvil para el publico en general:
+directorio local donde se crearan los archivos necesarios de la aplicación móvil para el publico en general: C:\\Users\\DMLM\\Desktop\\ThimpsonExpressMovilPublic\\
 
 repositorio de GitHub: https://github.com/DenDev93/ThimpsonExpressMovilPublic.git
 
 
 
-directorio local donde se crearan los archivos necesarios de la aplicación móvil para motorizados: 
+directorio local donde se crearan los archivos necesarios de la aplicación móvil para motorizados: C:\\Users\\DMLM\\Desktop\\ThimpsonExpressDrivers\\
 
 repositorio de GitHub: https://github.com/DenDev93/ThimpsonExpressDrivers.git
+
+
+
+
+
+para todos los directorios donde vayas construyendo avances debes de ir documentando todo y dejar una memoria para que en próximas sesiones recuerdes por donde va el avance de cada plataforma, todas las plataformas deben de construirse en función de trabajar interconectados para formar una sola maquinaria de software.
 
