@@ -31,19 +31,19 @@ Azul (Tigo): #00377B (Tono azul utilizado en el logo de Tigo).
 Tip para tu desarrollo web: Si estás usando CSS, puedes configurar estos colores como variables en tu archivo raíz (:root) para mantener la consistencia en toda la aplicación:
 
 :root {
-  --thimpson-yellow: #FBB03B;
-  --thimpson-black: #000000;
-  --thimpson-white: #FFFFFF;
-  --thimpson-dark-teal: #0B1F22;
-  --whatsapp-green: #25D366;
-  --tigo-blue: #00377B;
+--thimpson-yellow: #FBB03B;
+--thimpson-black: #000000;
+--thimpson-white: #FFFFFF;
+--thimpson-dark-teal: #0B1F22;
+--whatsapp-green: #25D366;
+--tigo-blue: #00377B;
 }
 
 .
 
 Descripción de Agente de IA o Asistente virtual administrativo: el agente de ia virtual que existirá en el panel administrativo es quien deberá trabajar de manera autónoma con tareas repetitivas especificas las 24 horas del dia, deberá recibir las solicitudes de servicios que lleguen del asistente virtual en forma de chatbot web que existira en la aplicación web abierta el publico y también debe capturar las solicitudes de que se capturen en el chatbot de whatsapp  que también existira en la aplicación web del mismo modo que el chatboot web son dos chatbot diferentes, y a parte de capturar lo que venga de los chatbots también deberá capturar las solicitudes que vengan de los formularios los cuales estarán disponibles en cards que estarán visibles al publico en general en la aplicación web, serán formularios inteligentes en donde las personas pueden realizar solicitudes de servicios de manera dinámica e inteligente, flexible y personalizado según las opciones que vayan escogiendo siempre y cuando esten disponibles en el o los formularios.
 
-Descripción de Plataforma 2: Aplicación web con react que servirá para el publico en general y a su vez sera un marketplace de negocios afiliados que mostraran sus catálogos individuales de productos y/o servicios,  la cual mostrará información relevante del negocio, como su nombre, números de contacto, misión y vision, catalogo de servicios propios de thimpson express, sección de galerías, sección de testimonios, sección de contacto, sección de marketplace en donde existira la opción de registrar negocio y ahi es donde entrara en juego las funcionalidades de CMS inteligente, para que cada negocio tenga la capacidad de gestionar su stock o inventario de productos que ofrece y también servicios o ambas cosas, con la unica condición de que usen el servicio de delivery de servicio express thimpson, de hecho debe ser automatico que cuando le hagan un pedido a travez de la aplicación web de thimpson express a un negocio registrado entonces que automáticamente tenga que utilizar el servicio de delivery de servicio express thimpson, para los negocios debe existir un modo gratis de mantenerse afiliados a servicio express thimpson y otro modo premium en donde deban pagar el plan mensualmente para usar otras funciones avanzadas del plan premium, esta sección de marketplace debe tener opción de suscribirse para poder acceder a ver todo los que ofrecerá la plataforma, una vez suscrito podrá ver la opción de registrarse con una cuenta de correo para después poder iniciar sesion, una sección de atención al cliente, también la aplicación web debe tener muchos llamados a la accion, flecha en todos los apartados o secciones de volver al inicio del la pagina en case de que si al hacer scroll es muy extenso, colores con los que se debe desarrollar las interfaces de la pagina web: 
+Descripción de Plataforma 2: Aplicación web con react que servirá para el publico en general y a su vez sera un marketplace de negocios afiliados que mostraran sus catálogos individuales de productos y/o servicios,  la cual mostrará información relevante del negocio, como su nombre, números de contacto, misión y vision, catalogo de servicios propios de thimpson express, sección de galerías, sección de testimonios, sección de contacto, sección de marketplace en donde existira la opción de registrar negocio y ahi es donde entrara en juego las funcionalidades de CMS inteligente, para que cada negocio tenga la capacidad de gestionar su stock o inventario de productos que ofrece y también servicios o ambas cosas, con la unica condición de que usen el servicio de delivery de servicio express thimpson, de hecho debe ser automatico que cuando le hagan un pedido a travez de la aplicación web de thimpson express a un negocio registrado entonces que automáticamente tenga que utilizar el servicio de delivery de servicio express thimpson, para los negocios debe existir un modo gratis de mantenerse afiliados a servicio express thimpson y otro modo premium en donde deban pagar el plan mensualmente para usar otras funciones avanzadas del plan premium, esta sección de marketplace debe tener opción de suscribirse para poder acceder a ver todo los que ofrecerá la plataforma, una vez suscrito podrá ver la opción de registrarse con una cuenta de correo para después poder iniciar sesion, una sección de atención al cliente, también la aplicación web debe tener muchos llamados a la accion, flecha en todos los apartados o secciones de volver al inicio del la pagina en case de que si al hacer scroll es muy extenso, colores con los que se debe desarrollar las interfaces de la pagina web:
 
 Colores de la Marca (Principales)
 Amarillo/Dorado: #FBB03B (Utilizado en el logo de Thimpson, textos resaltados).
@@ -67,16 +67,16 @@ Azul (Tigo): #00377B (Tono azul utilizado en el logo de Tigo).
 Tip para tu desarrollo web: Si estás usando CSS, puedes configurar estos colores como variables en tu archivo raíz (:root) para mantener la consistencia en toda la aplicación:
 
 :root {
-  --thimpson-yellow: #FBB03B;
-  --thimpson-black: #000000;
-  --thimpson-white: #FFFFFF;
-  --thimpson-dark-teal: #0B1F22;
-  --whatsapp-green: #25D366;
-  --tigo-blue: #00377B;
+--thimpson-yellow: #FBB03B;
+--thimpson-black: #000000;
+--thimpson-white: #FFFFFF;
+--thimpson-dark-teal: #0B1F22;
+--whatsapp-green: #25D366;
+--tigo-blue: #00377B;
 }
 
-números que aparecerán de contacto en la plataforma web: 
-Número Claro: +50584159112 
+números que aparecerán de contacto en la plataforma web:
+Número Claro: +50584159112
 Número Tigo : +50585932295
 .
 
@@ -130,24 +130,26 @@ Actualización para tu CSS (:root):
 Si estás desarrollando la versión web de esta app, aquí tienes cómo se vería la actualización de tus variables para que coincidan con la interfaz móvil:
 
 :root {
-  /* Colores principales */
-  --app-yellow: #FFD500;
-  --app-bg-white: #FFFFFF;
-  --app-card-dark: #1A1A1A;
-  --app-text-main: #000000;
-  
-  /* Neutros */
-  --app-text-muted: #757575;
-  --app-border-light: #EEEEEE;
-  
-  /* Acentos de categorías */
-  --cat-food-red: #E53935;
-  --cat-pharmacy-green: #4CAF50;
-  --cat-super-blue: #1976D2;
-  --rating-star-orange: #FF9800;
+/\* Colores principales \*/
+--app-yellow: #FFD500;
+--app-bg-white: #FFFFFF;
+--app-card-dark: #1A1A1A;
+--app-text-main: #000000;
+
+/\* Neutros \*/
+--app-text-muted: #757575;
+--app-border-light: #EEEEEE;
+
+/\* Acentos de categorías \*/
+--cat-food-red: #E53935;
+--cat-pharmacy-green: #4CAF50;
+--cat-super-blue: #1976D2;
+--rating-star-orange: #FF9800;
 }
 
 Descripción de Plataforma 4: App Motorizado(repartidor, conductor) Aplicación Móvil con React Native: en esta app solo podrán entrar los motorizados a ver su carga de trabajo diario, solicitudes de servicio asignadas desde el panel administrativo, en donde podrá gestionar sus solicitudes cargadas, iniciar la solicitud, para que empiece a cambiar de estado, puede ser en camino, entregada, cancelada, declinada etc. según la necesidad, podrá ver cuanto dinero se acumuló por mandado o solicitud de servicio, cuanto hizo diario, semanal, mensualmente, trimestralmente, cada seis meses y anualmente. es decir, podrán ver sus reportes propios de su desempeño o performance.
+
+
 
 Colores Principales (UI Base)
 Amarillo Vibrante: #FFD500 (El color predominante en botones principales, cabeceras, el panel lateral y los íconos del menú inferior cuando están activos).
@@ -178,21 +180,64 @@ Actualización para tu CSS (:root):
 Si estás desarrollando la versión web de esta app, aquí tienes cómo se vería la actualización de tus variables para que coincidan con la interfaz móvil:
 
 :root {
-  /* Colores principales */
-  --app-yellow: #FFD500;
-  --app-bg-white: #FFFFFF;
-  --app-card-dark: #1A1A1A;
-  --app-text-main: #000000;
-  
-  /* Neutros */
-  --app-text-muted: #757575;
-  --app-border-light: #EEEEEE;
-  
-  /* Acentos de categorías */
-  --cat-food-red: #E53935;
-  --cat-pharmacy-green: #4CAF50;
-  --cat-super-blue: #1976D2;
-  --rating-star-orange: #FF9800;
-}
+/\* Colores principales \*/
+--app-yellow: #FFD500;
+--app-bg-white: #FFFFFF;
+--app-card-dark: #1A1A1A;
+--app-text-main: #000000;
 
+/\* Neutros \*/
+--app-text-muted: #757575;
+--app-border-light: #EEEEEE;
+
+/\* Acentos de categorías \*/
+--cat-food-red: #E53935;
+--cat-pharmacy-green: #4CAF50;
+--cat-super-blue: #1976D2;
+--rating-star-orange: #FF9800;
+}.
+
+
+
+
+
+nota: todo lo que se vaya construyendo por favor ir documentando desde el principio para llevar una memoria histórica de todo este ecosistema para después en base a eso hacer la documentación adecuada y pertinente sobre cada plataforma de este ecosistema.
+
+
+
+dejar todo listo para que se conecte perfectamente a supabase, que no hayan errores de deploy en vercel que es la plataforma en donde hago deploy de mis proyectos.
+
+
+
+directorio local donde se crearan los archivos necesarios del panel administrativo: C:\\Users\\DMLM\\Desktop\\AdminThimpson\\
+
+repositorio de GitHub: https://github.com/DenDev93/AdminThimpson.git
+
+directorio local donde se crearan los archivos necesarios del panel administrativo: C:\\Users\\DMLM\\Desktop\\appwebThimpson\\
+
+repositorio de GitHub: https://github.com/DenDev93/appwebThimpson.git
+
+
+
+créame un directorio para la base de datos para que cada que se hagan cambios y sea afectada la base de datos.
+
+directorio local donde se crearan los archivos sql de la base de datos y/o backups: 
+
+repositorio de GitHub: https://github.com/DenDev93/ThimpsonExpressDB.git
+
+
+
+créame también los directorios correspondientes para el desarrollo de cada una de las aplicaciones móviles con sus archivos correspondientes que vayan surgiendo par la creación de las dos aplicaciones móviles, tanto para motorizados como para el publico en general. contexto de las aplicaciones ya mencionadas anteriormente.
+
+
+
+directorio local donde se crearan los archivos necesarios de la aplicación móvil para el publico en general:
+
+repositorio de GitHub: https://github.com/DenDev93/ThimpsonExpressMovilPublic.git
+
+
+
+directorio local donde se crearan los archivos necesarios de la aplicación móvil para motorizados: 
+
+repositorio de GitHub: https://github.com/DenDev93/ThimpsonExpressDrivers.git
 
