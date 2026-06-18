@@ -1,3 +1,7 @@
+Maquinaria Servicio Express Thimpson
+
+
+
 Proyecto fullstack de delivery, "Nota: necesito poder definirle que naturaleza tendrá o a que clase pertenece todo el ecosistema que quiero crear, si es un SaaS, Un Baas ó un IaaS", necesito definir en que categoría entra todo mi ecosistema, necesitare poder definir si este ecosistema debe ser creado con microservicios o quizá con otros patrones de diseño que se adapten mejor a todo lo que yo deseo implementar.
 
 Nombre del proyecto: Servicio Express Thimpson.
