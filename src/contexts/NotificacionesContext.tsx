@@ -16,7 +16,9 @@ interface NotifCtx {
   notificaciones: any[]
   noLeidas: number
   marcarLeida: (id: string) => Promise<void>
+  marcarNoLeida: (id: string) => Promise<void>
   marcarTodas: () => Promise<void>
+  eliminar: (id: string) => Promise<void>
   recargar: () => Promise<void>
 }
 
@@ -24,7 +26,9 @@ const Ctx = createContext<NotifCtx>({
   notificaciones: [],
   noLeidas: 0,
   marcarLeida: async () => {},
+  marcarNoLeida: async () => {},
   marcarTodas: async () => {},
+  eliminar: async () => {},
   recargar: async () => {},
 })
 
@@ -64,7 +68,7 @@ export function NotificacionesProvider({ children }: { children: ReactNode }) {
         setNotificaciones(prev => [nueva, ...prev])
         setNoLeidas(prev => prev + 1)
         const src = SONIDOS[nueva.tipo] ?? SONIDOS.general
-        try { new Audio(src).play() } catch {}
+        new Audio(src).play().catch(() => {})
       })
       .subscribe()
 
@@ -84,6 +88,19 @@ export function NotificacionesProvider({ children }: { children: ReactNode }) {
     setNoLeidas(prev => Math.max(0, prev - 1))
   }
 
+  const marcarNoLeida = async (id: string) => {
+    if (!token) return
+    await apiFetch(`/api/notificaciones/${id}`, { method: 'PATCH', body: JSON.stringify({ leida: false }) }, token)
+    setNotificaciones(prev => prev.map(n => n.id === id ? { ...n, leida: false } : n))
+    setNoLeidas(prev => prev + 1)
+  }
+
+  const eliminar = async (id: string) => {
+    if (!token) return
+    await apiFetch(`/api/notificaciones/${id}`, { method: 'DELETE' }, token)
+    setNotificaciones(prev => prev.filter(n => n.id !== id))
+  }
+
   const marcarTodas = async () => {
     if (!token) return
     await apiFetch('/api/notificaciones/marcar-todas', { method: 'POST' }, token)
@@ -92,7 +109,7 @@ export function NotificacionesProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <Ctx.Provider value={{ notificaciones, noLeidas, marcarLeida, marcarTodas, recargar: cargar }}>
+    <Ctx.Provider value={{ notificaciones, noLeidas, marcarLeida, marcarNoLeida, marcarTodas, eliminar, recargar: cargar }}>
       {children}
     </Ctx.Provider>
   )

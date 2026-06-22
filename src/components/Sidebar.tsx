@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
-import { useNotificaciones } from '@/hooks/useNotificaciones'
+import { useNotificaciones } from '@/contexts/NotificacionesContext'
 
 interface TreeItem { to: string; label: string; icon?: string }
 interface NavGroup {
@@ -53,7 +53,7 @@ function NavTree({ icon, label, badge, to, children }: NavGroup['items'][number]
   )
 }
 
-export default function Sidebar() {
+export default function Sidebar({ mobileOpen = false, onClose }: { mobileOpen?: boolean; collapsed?: boolean; onClose?: () => void }) {
   const { perfil, logout } = useAuth()
   const { noLeidas } = useNotificaciones()
   const navigate = useNavigate()
@@ -117,20 +117,21 @@ export default function Sidebar() {
     },
   ]
 
+  const handleNav = (to: string) => {
+    navigate(to)
+    onClose?.()
+  }
+
   return (
-    <aside className="main-sidebar">
-      {/* Brand */}
-      <a href="/dashboard" className="brand-link">
+    <aside className={`main-sidebar ${mobileOpen ? 'mobile-open' : ''}`}>
+      <div className="brand-link" onClick={() => handleNav('/dashboard')} style={{ cursor: 'pointer' }}>
         <div className="brand-logo">T</div>
         <div>
           <div className="brand-text">Thimpson</div>
-          <div style={{ fontSize: 9, color: 'rgba(255,255,255,.3)', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-            Panel Admin
-          </div>
+          <div className="brand-sub">Panel Admin</div>
         </div>
-      </a>
+      </div>
 
-      {/* Nav */}
       <div className="sidebar">
         <nav>
           {grupos.map(g => (
@@ -146,20 +147,15 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      {/* User panel */}
       <div className="user-panel">
-        <div className="navbar-avatar" style={{ width: 36, height: 36, marginBottom: 8, background: '#FBB03B', color: '#0B1F22', fontWeight: 800, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="user-avatar">
           {(perfil?.nombre_completo ?? 'A').charAt(0).toUpperCase()}
         </div>
         <div className="user-panel-name">{perfil?.nombre_completo ?? 'Administrador'}</div>
         <div className="user-panel-info">
           {perfil?.rol === 'super_admin' ? 'Super Admin · Global' : (perfil as any)?.sucursales?.nombre ?? 'Administrador'}
         </div>
-        <button
-          onClick={() => { logout(); navigate('/login') }}
-          style={{ marginTop: 10, background: 'transparent', border: 'none', color: 'rgba(255,255,255,.4)', fontSize: 12, cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center', gap: 5, transition: 'color 150ms' }}
-          onMouseEnter={e => (e.currentTarget.style.color = '#ff6b6b')}
-          onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,.4)')}>
+        <button onClick={() => { logout(); navigate('/login') }} className="logout-btn">
           ⎋ Cerrar sesión
         </button>
       </div>

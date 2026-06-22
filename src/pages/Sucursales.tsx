@@ -173,14 +173,14 @@ export default function Sucursales() {
 
               {/* Acciones */}
               <div className="px-5 pb-4 flex gap-2">
-                <button onClick={() => abrirEditar(s)}
-                  className="flex-1 py-2 bg-thimpson-teal text-thimpson-yellow text-sm font-semibold rounded-lg hover:opacity-90">
-                  Editar
+                <button onClick={() => abrirEditar(s)} title="Editar"
+                  className="flex-1 py-2 bg-thimpson-teal/10 text-thimpson-teal text-sm font-semibold rounded-lg hover:bg-thimpson-teal/20 transition-colors flex items-center justify-center gap-2">
+                  ✏️ Editar
                 </button>
                 {perfil?.rol === 'super_admin' && (
-                  <button onClick={() => toggleActivo(s)}
-                    className={`px-4 py-2 text-white text-sm font-semibold rounded-lg hover:opacity-90 ${s.activo ? 'bg-red-500' : 'bg-green-600'}`}>
-                    {s.activo ? 'Desactivar' : 'Activar'}
+                  <button onClick={() => toggleActivo(s)} title={s.activo ? 'Desactivar' : 'Activar'}
+                    className={`px-4 py-2 rounded-lg font-semibold text-sm transition-colors flex items-center gap-2 ${s.activo ? 'bg-red-50 text-red-500 hover:bg-red-100' : 'bg-green-50 text-green-600 hover:bg-green-100'}`}>
+                    {s.activo ? '⏻' : '▶️'} {s.activo ? 'Desactivar' : 'Activar'}
                   </button>
                 )}
               </div>

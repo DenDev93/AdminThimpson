@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider, useAuth } from '@/contexts/AuthContext'
 import { NotificacionesProvider } from '@/contexts/NotificacionesContext'
@@ -15,38 +16,36 @@ import Nomina from '@/pages/Nomina'
 import Usuarios from '@/pages/Usuarios'
 import Sucursales from '@/pages/Sucursales'
 import Servicios from '@/pages/Servicios'
-import Proximos from '@/pages/Proximos'
+import Clientes from '@/pages/Clientes'
+import Suscriptores from '@/pages/Suscriptores'
+import AgentesIA from '@/pages/AgentesIA'
+import Chatbots from '@/pages/Chatbots'
 
-function Topbar() {
+function Topbar({ onToggleSidebar, onCollapse, collapsed }: { onToggleSidebar: () => void; onCollapse: () => void; collapsed: boolean }) {
   const { perfil } = useAuth()
   const inicial = (perfil?.nombre_completo ?? 'A').charAt(0).toUpperCase()
   return (
     <header className="main-header">
-      {/* Search bar */}
-      <div className="navbar-search" style={{ flex: '0 0 auto', width: 280 }}>
+      <div className="main-header-left">
+        <button className="hamburger-btn" onClick={onToggleSidebar} aria-label="Toggle sidebar">
+          <span /><span /><span />
+        </button>
+        <button className={`collapse-btn ${collapsed ? 'is-collapsed' : ''}`} onClick={onCollapse} aria-label="Collapse sidebar" title={collapsed ? 'Expandir sidebar' : 'Colapsar sidebar'}>
+          ◀
+        </button>
+      </div>
+      <div className="navbar-search">
         <span style={{ color: '#999', fontSize: 14 }}>🔍</span>
         <input placeholder="Buscar..." />
       </div>
-
       <div className="navbar-end">
-        {/* Notifications */}
-        <div className="navbar-icon-btn" title="Notificaciones">
-          🔔
-        </div>
-
-        {/* Divider */}
-        <div style={{ width: 1, height: 24, background: '#e0e0e0' }} />
-
-        {/* User */}
+        <div className="navbar-icon-btn" title="Notificaciones">🔔</div>
+        <div className="navbar-divider" />
         <div className="navbar-user">
           <div className="navbar-avatar">{inicial}</div>
-          <div style={{ textAlign: 'right' }}>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#1a1a2e', lineHeight: 1.2 }}>
-              {perfil?.nombre_completo ?? 'Administrador'}
-            </div>
-            <div style={{ fontSize: 11, color: '#999' }}>
-              {perfil?.rol === 'super_admin' ? 'Super Admin' : 'Administrador'}
-            </div>
+          <div className="navbar-user-info">
+            <div className="navbar-user-name">{perfil?.nombre_completo ?? 'Administrador'}</div>
+            <div className="navbar-user-rol">{perfil?.rol === 'super_admin' ? 'Super Admin' : 'Administrador'}</div>
           </div>
         </div>
       </div>
@@ -54,13 +53,27 @@ function Topbar() {
   )
 }
 
-function Layout({ children }: { children: React.ReactNode }) {
+function Footer() {
   return (
-    <div className="wrapper">
-      <Sidebar />
+    <footer className="main-footer">
+      <span>© {new Date().getFullYear()} Servicio Express Thimpson</span>
+      <span className="main-footer-version">v2.0.0</span>
+    </footer>
+  )
+}
+
+function Layout({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [collapsed, setCollapsed] = useState(false)
+
+  return (
+    <div className={`wrapper ${collapsed ? 'sidebar-collapsed' : ''}`}>
+      <div className={`sidebar-overlay ${sidebarOpen ? 'open' : ''}`} onClick={() => setSidebarOpen(false)} />
+      <Sidebar mobileOpen={sidebarOpen} collapsed={collapsed} onClose={() => setSidebarOpen(false)} />
       <div className="content-wrapper">
-        <Topbar />
+        <Topbar onToggleSidebar={() => setSidebarOpen(o => !o)} onCollapse={() => setCollapsed(o => !o)} collapsed={collapsed} />
         <div className="page-enter">{children}</div>
+        <Footer />
       </div>
     </div>
   )
@@ -94,7 +107,6 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={token ? <Navigate to="/dashboard" replace /> : <Login />} />
-      {/* Existentes */}
       <Route path="/dashboard"      element={<ProtectedPage><Dashboard /></ProtectedPage>} />
       <Route path="/solicitudes"    element={<ProtectedPage><Solicitudes /></ProtectedPage>} />
       <Route path="/motorizados"    element={<ProtectedPage><Motorizados /></ProtectedPage>} />
@@ -102,18 +114,15 @@ function AppRoutes() {
       <Route path="/cms"            element={<ProtectedPage><CMS /></ProtectedPage>} />
       <Route path="/ganancias"      element={<ProtectedPage><Ganancias /></ProtectedPage>} />
       <Route path="/notificaciones" element={<ProtectedPage><Notificaciones /></ProtectedPage>} />
-      {/* Nuevos — RRHH */}
       <Route path="/empleados"      element={<ProtectedPage><Empleados /></ProtectedPage>} />
       <Route path="/nomina"         element={<ProtectedPage><Nomina /></ProtectedPage>} />
-      {/* Próximos módulos — placeholder */}
       <Route path="/usuarios"       element={<ProtectedPage><Usuarios /></ProtectedPage>} />
       <Route path="/sucursales"     element={<ProtectedPage><Sucursales /></ProtectedPage>} />
       <Route path="/servicios"      element={<ProtectedPage><Servicios /></ProtectedPage>} />
-      <Route path="/suscriptores"   element={<ProtectedPage><Proximos titulo="Suscriptores" icono="⭐" desc="Gestión de planes de suscripción y membresías premium." /></ProtectedPage>} />
-      <Route path="/clientes"       element={<ProtectedPage><Proximos titulo="Clientes" icono="🛒" desc="Base de clientes con historial de pedidos y estadísticas." /></ProtectedPage>} />
-      <Route path="/agentes-ia"     element={<ProtectedPage><Proximos titulo="Agentes de IA" icono="🤖" desc="Configura y monitorea los agentes inteligentes del ecosistema Thimpson." /></ProtectedPage>} />
-      <Route path="/chatbots"       element={<ProtectedPage><Proximos titulo="Chatbots" icono="💬" desc="Configura los chatbots de WhatsApp, web y app para atención automatizada." /></ProtectedPage>} />
-      {/* Catch-all */}
+      <Route path="/suscriptores"   element={<ProtectedPage><Suscriptores /></ProtectedPage>} />
+      <Route path="/clientes"       element={<ProtectedPage><Clientes /></ProtectedPage>} />
+      <Route path="/agentes-ia"     element={<ProtectedPage><AgentesIA /></ProtectedPage>} />
+      <Route path="/chatbots"       element={<ProtectedPage><Chatbots /></ProtectedPage>} />
       <Route path="/"  element={<Navigate to="/dashboard" replace />} />
       <Route path="*"  element={<Navigate to="/dashboard" replace />} />
     </Routes>

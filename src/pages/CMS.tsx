@@ -127,13 +127,13 @@ export default function CMS() {
     <div className="form-group" key={key}>
       <label className="form-label">{label}</label>
       {multiline ? (
-        <textarea className="form-control" rows={3} defaultValue={cms[key] ?? ''} name={key} placeholder={placeholder}
+        <textarea className="form-control" rows={3} defaultValue={cms[key] ?? ''} name={key as string} placeholder={placeholder}
           style={{ resize: 'vertical', borderBottom: '2px solid #ddd', padding: '9px 12px', outline: 'none', fontSize: 13 }}
           onFocus={e => { e.currentTarget.style.borderBottomColor = '#FBB03B' }}
           onBlur={e => { e.currentTarget.style.borderBottomColor = '#ddd' }}
         />
       ) : (
-        <input className="form-control" type="text" defaultValue={cms[key] ?? ''} name={key} placeholder={placeholder} />
+        <input className="form-control" type="text" defaultValue={cms[key] ?? ''} name={key as string} placeholder={placeholder} />
       )}
     </div>
   )
@@ -159,10 +159,10 @@ export default function CMS() {
       </div>
 
       <div className="content">
-        <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start' }}>
+        <div className="cms-layout" style={{ display: 'flex', gap: 20, alignItems: 'flex-start', flexDirection: 'row' }}>
 
           {/* Sidebar tabs */}
-          <div className="card elevation-1" style={{ width: 220, flexShrink: 0 }}>
+          <div className="card elevation-1 cms-sidebar" style={{ width: 220, flexShrink: 0 }}>
             <div className="card-header">
               <span className="card-title" style={{ fontSize: 12 }}>SECCIONES</span>
             </div>

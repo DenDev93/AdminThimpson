@@ -92,7 +92,7 @@ const VACÍO: Partial<Empleado> = {
 }
 
 export default function Empleados() {
-  const { token, perfil } = useAuth()
+  const { token } = useAuth()
   const [empleados, setEmpleados]   = useState<Empleado[]>([])
   const [loading, setLoading]       = useState(true)
   const [totalRows, setTotalRows]   = useState(0)
@@ -257,20 +257,20 @@ export default function Empleados() {
     {
       name: 'Acciones',
       cell: (row: Empleado) => (
-        <div className="flex items-center gap-1.5">
-          <button onClick={() => abrirEditar(row)}
-            className="px-2.5 py-1.5 bg-thimpson-teal text-white text-xs rounded-lg hover:opacity-90 transition-opacity">
-            Editar
+        <div className="flex items-center gap-1">
+          <button onClick={() => abrirEditar(row)} title="Editar"
+            className="w-8 h-8 flex items-center justify-center bg-thimpson-teal/10 text-thimpson-teal rounded-lg hover:bg-thimpson-teal/20 transition-colors text-lg">
+            ✏️
           </button>
-          <button onClick={() => eliminar(row)}
-            className="px-2.5 py-1.5 bg-red-500 text-white text-xs rounded-lg hover:opacity-90 transition-opacity">
-            Eliminar
+          <button onClick={() => eliminar(row)} title="Eliminar"
+            className="w-8 h-8 flex items-center justify-center bg-red-50 text-red-500 rounded-lg hover:bg-red-100 transition-colors text-lg">
+            🗑️
           </button>
         </div>
       ),
       ignoreRowClick: true,
       right: true,
-      minWidth: '140px',
+      minWidth: '100px',
     },
   ]
 

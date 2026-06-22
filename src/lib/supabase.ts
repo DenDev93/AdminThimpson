@@ -7,6 +7,6 @@ const isValidUrl = (s: string) => { try { new URL(s); return true } catch { retu
 
 export const supabase = isValidUrl(url)
   ? createClient(url, key, { realtime: { params: { eventsPerSecond: 10 } } })
-  : (null as ReturnType<typeof createClient>)
+  : (null as unknown as ReturnType<typeof createClient>)
 
 export default supabase

@@ -136,7 +136,6 @@ export default function Usuarios() {
 
   const adminCount   = usuarios.filter(u => u.rol === 'admin' || u.rol === 'super_admin').length
   const motorizadoCount = usuarios.filter(u => u.rol === 'motorizado').length
-  const clienteCount = usuarios.filter(u => u.rol === 'cliente').length
   const activoCount  = usuarios.filter(u => u.activo).length
 
   const columnas = [
@@ -178,15 +177,15 @@ export default function Usuarios() {
       right: true,
       minWidth: '160px',
       cell: (u: Usuario) => (
-        <div className="flex gap-1.5">
-          <button onClick={() => abrirEditar(u)}
-            className="px-2.5 py-1.5 bg-thimpson-teal text-white text-xs rounded-lg hover:opacity-90">
-            Editar
+        <div className="flex gap-1">
+          <button onClick={() => abrirEditar(u)} title="Editar"
+            className="w-8 h-8 flex items-center justify-center bg-thimpson-teal/10 text-thimpson-teal rounded-lg hover:bg-thimpson-teal/20 transition-colors text-lg">
+            ✏️
           </button>
           {u.id !== perfilAdmin?.id && (
-            <button onClick={() => toggleActivo(u)}
-              className={`px-2.5 py-1.5 text-white text-xs rounded-lg hover:opacity-90 ${u.activo ? 'bg-yellow-500' : 'bg-green-600'}`}>
-              {u.activo ? 'Desactivar' : 'Activar'}
+            <button onClick={() => toggleActivo(u)} title={u.activo ? 'Desactivar' : 'Activar'}
+              className={`w-8 h-8 flex items-center justify-center rounded-lg transition-colors text-lg ${u.activo ? 'bg-yellow-50 text-yellow-600 hover:bg-yellow-100' : 'bg-green-50 text-green-600 hover:bg-green-100'}`}>
+              {u.activo ? '⏻' : '▶️'}
             </button>
           )}
         </div>
